@@ -1,0 +1,102 @@
+
+Table DEPARTMENT created.
+
+
+Sequence DEPT_ID_SEQ created.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+1 row inserted.
+
+
+Procedure MODIFY_DEPT compiled
+
+
+Error starting at line : 62 in command -
+BEGIN
+    MODIFY_DEPT(NULL, 'NY');
+END;
+Error report -
+ORA-20001: Department name cannot be null or empty.
+ORA-06512: at "AKASH.MODIFY_DEPT", line 11
+ORA-06512: at line 2
+
+
+Error starting at line : 67 in command -
+BEGIN
+    MODIFY_DEPT('', 'NY');
+END;
+Error report -
+ORA-20001: Department name cannot be null or empty.
+ORA-06512: at "AKASH.MODIFY_DEPT", line 11
+ORA-06512: at line 2
+
+
+Error starting at line : 72 in command -
+BEGIN
+    MODIFY_DEPT(123, 'NY');
+END;
+Error report -
+ORA-20002: Department name cannot be a number.
+ORA-06512: at "AKASH.MODIFY_DEPT", line 13
+ORA-06512: at line 2
+
+
+Error starting at line : 77 in command -
+BEGIN
+    MODIFY_DEPT('Marketing', 'TN');
+END;
+Error report -
+ORA-20003: Department location is not valid.
+ORA-06512: at "AKASH.MODIFY_DEPT", line 21
+ORA-06512: at line 2
+
+
+Error starting at line : 82 in command -
+BEGIN
+    MODIFY_DEPT('abcdefghijklmnopqrstuvwxyz', 'NY');
+END;
+Error report -
+ORA-20004: Department name cannot be more than 20 characters.
+ORA-06512: at "AKASH.MODIFY_DEPT", line 26
+ORA-06512: at line 2
+
+Department inserted successfully.
+
+
+PL/SQL procedure successfully completed.
+
+Department updated successfully.
+
+
+PL/SQL procedure successfully completed.
+
+Department inserted successfully.
+
+
+PL/SQL procedure successfully completed.
+
+Department inserted successfully.
+
+
+PL/SQL procedure successfully completed.
+
+Department inserted successfully.
+
+
+PL/SQL procedure successfully completed.
+
